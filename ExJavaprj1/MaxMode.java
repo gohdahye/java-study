@@ -1,16 +1,36 @@
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class MaxMode {
 
 	public static void main(String[] args) {
-		int myArr[] = {1, 2, 3, 3, 3, 4};
+		Scanner sc = new Scanner(System.in);
+		System.out.print("테스트 할 개수를 입력해주세요: ");
+		int testCnt = sc.nextInt();
+		int testLeng = 0;
+		int InArr[][] = new int[testCnt][];
 		
-		SolutionEx[] sol = new SolutionEx[2];
-		sol[0] = new SolutionEx();
-		sol[0].solution(myArr);
-	}
+		for(int i=0; i<testCnt; i++) {
+			System.out.print("몇 개를 테스트할 것 인지 입력해주세요: ");
+			testLeng = sc.nextInt();
+			InArr[i] = new int[testLeng];
+			sc.nextLine();
+			
+			System.out.print("테스트 케이스를 한줄로 입력해주세요: ");
+			String input = sc.nextLine();
+			String [] StrIn = input.split(" ");
+			
+			for(int j=0; j<testLeng; j++) {
+				InArr[i][j] = Integer.parseInt(StrIn[j]);
+			}
+			
+		}
+		SolutionEx sol1 = new SolutionEx();
+		
 
+	}
 }
+	
 class SolutionEx {
     public int solution(int[] array) {
         int answer = 0;
