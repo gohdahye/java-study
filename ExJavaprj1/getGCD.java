@@ -29,7 +29,7 @@ public class getGCD {
         int lcm = getLCM(num1, num2, gcd);
         
         System.out.printf("최대공약수 : %d%n",gcd);
-        System.out.printf("최소공약수 : %d",lcm);
+        System.out.printf("최소공배수 : %d",lcm);
     }
 	
     
